@@ -1,4 +1,3 @@
-import { placeholder } from "@babel/types";
 import { ChangeEvent, useEffect, useState } from "react";
 import { Button, Item, Label, Segment, Header, Input } from "semantic-ui-react";
 import { Commit } from "../../app/api/commit";

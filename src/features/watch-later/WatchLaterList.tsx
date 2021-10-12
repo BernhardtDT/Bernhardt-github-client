@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Button, Header, Image, Item, Label, Segment } from "semantic-ui-react";
+import { Button, Header, Item, Label, Segment } from "semantic-ui-react";
 import { WatchLater } from "../../app/api/watchLater";
 
 interface Props {
@@ -9,6 +9,7 @@ interface Props {
 }
 
 export default function WatchLaterList({ handleWatchLater, removeWatchLater, watchLater }: Props) {
+    
     useEffect(() => {
         handleWatchLater();
     }, [])

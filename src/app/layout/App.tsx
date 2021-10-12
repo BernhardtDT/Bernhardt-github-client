@@ -107,18 +107,18 @@ function App() {
   function mapCommits(commitItems: CommitItem[]) {
     var mappedCommits : Commit[] = []
 
-    commitItems.forEach(x => {
-        x.payload.commits.forEach(y => {
+    commitItems.forEach(item => {
+      item.payload.commits.forEach(line => {
           var mappedCommit : Commit = {
-            created_at: x.created_at,
-            message: y.message,
-            repo_name: x.repo.name,
-            repo_url: x.repo.url,
-            sha: y.sha,
-            url: y.url,
-            type: x.type,
-            login: x.actor.login,
-            avatar_url: x.actor.avatar_url
+            created_at: item.created_at,
+            message: line.message,
+            repo_name: item.repo.name,
+            repo_url: item.repo.url,
+            sha: line.sha,
+            url: line.url,
+            type: item.type,
+            login: item.actor.login,
+            avatar_url: item.actor.avatar_url
           }
 
           mappedCommits.push(mappedCommit);
