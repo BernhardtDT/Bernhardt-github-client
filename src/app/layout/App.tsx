@@ -81,7 +81,7 @@ function App() {
           mappedCommitItems.push(commit);
         });
 
-        mappedCommitItems.sort((x, y) => (+new Date(x.created_at)) - (+new Date(y.created_at)));
+        mappedCommitItems.sort((x, y) => (+new Date(x.created_at)) + (+new Date(y.created_at)));
         
         var commits = mapCommits(mappedCommitItems);
 

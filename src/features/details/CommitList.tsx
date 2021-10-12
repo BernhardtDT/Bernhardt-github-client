@@ -24,7 +24,7 @@ export default function CommitList({ commits, convertToDate, watchLater }: Props
         if (search === '') {
             setCommits(commits);
         } else {
-            var filteredCommits = commits.filter(x => x.message.toLowerCase().includes(search));
+            var filteredCommits = commits.filter(x => x.message.toLowerCase().includes(search.toLowerCase()));
             setCommits(filteredCommits);
         }
       };
