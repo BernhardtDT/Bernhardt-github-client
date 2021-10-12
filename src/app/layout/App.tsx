@@ -37,7 +37,7 @@ function App() {
   var handleUserSearch = async(userSearch : string) => {
     setUser(undefined);
     setCommits(undefined);
-    await axios.get<User>('https://api.github.com/users/' + userSearch, {headers: {Authorization: 'token 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'}})
+    await axios.get<User>('https://api.github.com/users/' + userSearch)
       .then(userItem => {
         var user: User = {
           login: userItem.data.login,
@@ -55,7 +55,7 @@ function App() {
   }
 
   var handleCommitSearch = async(userLogin: string) => {
-    await axios.get<CommitItem[]>('https://api.github.com/users/' + userLogin + '/events', {headers: {Authorization: 'token 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'}})
+    await axios.get<CommitItem[]>('https://api.github.com/users/' + userLogin + '/events')
       .then(commitItems => {
         var filteredCommits = commitItems.data.filter(ci => ci.type === 'PushEvent');
 
