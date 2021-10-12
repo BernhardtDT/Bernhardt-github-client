@@ -22,9 +22,9 @@ You will also see any lint errors in the console.
 This project was created as a coding test for a company I am interested to join
 
 ### Functionality include: 
-    Search for a Github user account\
-    Ability to see user recent changes as commits\
-    Ability to mark change as watch later\
+    Search for a Github user account
+    Ability to see user recent changes as commits
+    Ability to mark change as watch later
     Ability to view changes marked as watch later and to remove them when no longer needed
 
 
